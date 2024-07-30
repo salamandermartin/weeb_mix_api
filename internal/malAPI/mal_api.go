@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const mal_baseURL = "https://api.myanimelist.net/v2"
+
 type mal_Client struct {
 	httpClient http.Client
 }

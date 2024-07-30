@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+const sp_baseURL = "https://api.spotify.com/v1"
+
 type spotify_Client struct {
 	httpClient http.Client
 }
