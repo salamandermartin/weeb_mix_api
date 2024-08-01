@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func (c *spotify_Client) SongReq(pageURL *string, songName string) (SearchQueryResp, error) {
+func (c *Client) SongReq(pageURL *string, songName string) (SearchQueryResp, error) {
 	endpoint := "/search"
 	fullURL := sp_baseURL + endpoint + songName
 

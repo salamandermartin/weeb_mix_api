@@ -2,16 +2,19 @@ package main
 
 import (
 	"time"
+
+	mal_api "github.com/salamandermartin/weeb_mix_api/internal/malAPI"
+	spotify_api "github.com/salamandermartin/weeb_mix_api/internal/spotifyAPI"
 )
 
 type config struct {
-	spotifyClient spotify_api.spotify_Client
-	malClient     mal_api.mal_Client
+	spotifyClient spotify_api.Client
+	malClient     mal_api.Client
 }
 
 func main() {
 	cfg := config{
-		spotifyClient: spotify_api.spotifyNewClient(time.Hour),
-		malClient:     mal_api.malNewClient(time.Hour),
+		spotifyClient: spotify_api.NewClient(time.Hour),
+		malClient:     mal_api.NewClient(time.Hour),
 	}
 }
