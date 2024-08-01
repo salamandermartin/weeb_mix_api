@@ -7,9 +7,9 @@ import (
 	"net/http"
 )
 
-func (c *spotify_Client) SongReq(pageURL *string) (SearchQueryResp, error) {
+func (c *spotify_Client) SongReq(pageURL *string, songName string) (SearchQueryResp, error) {
 	endpoint := "/search"
-	fullURL := sp_baseURL + endpoint
+	fullURL := sp_baseURL + endpoint + songName
 
 	if pageURL != nil {
 		fullURL = *pageURL
